@@ -13,8 +13,10 @@
             <div class="logo">Lapidan Hub</div>
             <div class="nav-links">
                 <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#metodo">Método</a>
+                <a href="#depoimentos">Depoimentos</a>
                 <button class="falar-conosco">Falar Conosco</button>
             </div>
         </nav>
@@ -63,7 +65,7 @@
             </div>
         </section>
 
-        <section class="sobre-tiago">
+        <section id="sobre" class="sobre-tiago">
             <div class="sobre-header">
                 <span class="tag-sobre">SOBRE TIAGO | LAPIDAN HUB</span>
                 <h2>Transformando ideias em<br><span class="gradient-text-blue">resultados</span> <span class="gradient-text-purple">reais</span></h2>
@@ -80,7 +82,7 @@
 
                 <div class="profile-card">
                     <div class="profile-content">
-                        <div class="profile-avatar">TR</div>
+                        <img src="images/IMG_5047.PNG" alt="Tiago Reis" class="profile-image">
                         <h3>Tiago Reis</h3>
                         <p>Founder, Lapidan Hub</p>
                     </div>
@@ -88,7 +90,7 @@
             </div>
         </section>
 
-        <section class="servicos-principais">
+        <section id="servicos" class="servicos-principais">
             <h2>Serviços Principais</h2>
             <div class="servicos-grid">
                 <div class="servico-card">
@@ -201,7 +203,7 @@
             </div>
         </section>
 
-        <section class="metodo-pird">
+        <section id="metodo" class="metodo-pird">
             <span class="metodo-tag">NOSSO MÉTODO</span>
             <h2>Método <span class="pird-text">PIRD</span></h2>
             <p class="metodo-descricao">Tudo começa com método. E aqui, usamos o PIRD para estruturar cada etapa do seu conteúdo</p>
@@ -263,94 +265,34 @@
                 <p class="depoimentos-subtitulo">Histórias reais de profissionais e especialistas que transformaram sua presença digital</p>
             </div>
 
-            <div class="video-carousel">
+            <div id="depoimentos" class="video-carousel">
                 <div class="carousel-container">
-                    <div class="video-story far-prev">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
+                    <div class="videos-wrapper">
+                        <div class="video-story">
+                            <video src="videos/video2.mp4" playsinline preload="auto"></video>
                         </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video1.mp4" loop muted></video>
-                    </div>
-                    <div class="video-story prev">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video2.mp4" loop muted></video>
-                    </div>
-                    <div class="video-story active">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video3.mp4" loop muted></video>
-                    </div>
-                    <div class="video-story next">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video4.mp4" loop muted></video>
-                    </div>
-                    <div class="video-story far-next">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video5.mp4" loop muted></video>
-                    </div>
-                    <div class="video-story">
-                        <div class="video-progress">
-                            <div class="progress-bar"></div>
-                        </div>
-                        <button class="play-button">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 5.14722L19 12.0002L8 18.8531V5.14722Z" fill="currentColor"/>
-                            </svg>
-                        </button>
-                        <video src="video6.mp4" loop muted></video>
-                    </div>
-                </div>
 
-                <button class="carousel-nav prev">
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="carousel-nav next">
-                    <svg viewBox="0 0 24 24" fill="none">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+                        <div class="video-story">
+                            <video src="videos/video3.mp4" playsinline preload="auto"></video>
+                        </div>
 
-                <div class="carousel-controls">
-                    <div class="carousel-dot active"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
-                    <div class="carousel-dot"></div>
+                        <div class="video-story">
+                            <video src="videos/video4.mp4" playsinline preload="auto"></video>
+                        </div>
+
+                        <div class="video-story">
+                            <video src="videos/video5.mp4" playsinline preload="auto"></video>
+                        </div>
+                    </div>
+
+                    <div class="carousel-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <div class="carousel-arrow prev"></div>
+                        <div class="carousel-arrow next"></div>
+                    </div>
                 </div>
             </div>
         </section>

@@ -1,0 +1,10 @@
+# Ignorar arquivos de vídeo
+video/
+videos/
+*.mp4
+*.mov
+*.MOV
+
+# Manter apenas os arquivos necessários
+!videos/*.mp4
+!video/*.mp4 
