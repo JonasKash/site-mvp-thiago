@@ -1,0 +1,13 @@
+{
+  "name": "site_thiago",
+  "version": "1.0.0",
+  "description": "Static website project",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server",
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+} 

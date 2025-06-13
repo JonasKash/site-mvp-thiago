@@ -8,21 +8,30 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Gerenciar links ativos no menu
+function setActiveLink() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPath = window.location.pathname;
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === '/' && href === '#inicio')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
 // Animação suave ao clicar nos links do menu
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        
+        const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const headerOffset = 80; // Ajuste conforme a altura do seu header
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         }
     });
@@ -242,4 +251,32 @@ document.addEventListener('visibilitychange', () => {
 // Iniciar carrossel
 document.addEventListener('DOMContentLoaded', () => {
     updateCarousel(0);
+    setActiveLink();
+});
+
+// Menu Mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Fechar o menu ao clicar em um link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+});
+
+// Fechar menu ao rolar a página
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll) {
+        navLinks.classList.remove('active');
+    }
+    lastScroll = currentScroll;
 }); 
