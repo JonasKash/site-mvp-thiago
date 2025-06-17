@@ -107,19 +107,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Controle de play/pause ao clicar no vídeo
     items.forEach((item, index) => {
         const overlay = item.querySelector('.story-overlay');
-        if (overlay) {
+        const video = item.querySelector('video');
+        
+        if (overlay && video) {
             overlay.addEventListener('click', () => {
                 if (index === currentIndex) {
-                    const video = item.querySelector('video');
-                    if (video) {
-                        if (video.paused) {
-                            stopAllVideos();
-                            playVideo(item);
-                        } else {
-                            video.pause();
-                            item.classList.remove('playing');
-                            isPlaying = false;
-                        }
+                    if (video.paused) {
+                        stopAllVideos();
+                        playVideo(item);
+                    } else {
+                        video.pause();
+                        item.classList.remove('playing');
+                        isPlaying = false;
                     }
                 } else {
                     stopAllVideos();
