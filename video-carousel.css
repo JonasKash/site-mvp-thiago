@@ -148,8 +148,8 @@
 }
 
 .story-item.playing .story-overlay {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0.3;
+    pointer-events: auto;
 }
 
 .play-icon {
@@ -166,7 +166,8 @@
 }
 
 .story-item.playing .play-icon {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .play-icon svg {
